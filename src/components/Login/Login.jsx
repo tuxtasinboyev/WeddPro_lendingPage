@@ -17,9 +17,14 @@ export default function WeddProLogin() {
             ...formData,
             [e.target.name]: e.target.value
         });
+
+    };
+    const handleButton = (e) => {
+        e.preventDefault()
+
         localStorage.setItem(demo, formData)
         navigate('/home')
-    };
+    }
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-6">
@@ -191,7 +196,7 @@ export default function WeddProLogin() {
                             </div>
 
                             {/* Login Button */}
-                            <button
+                            <button onClick={handleButton}
                                 type="submit"
                                 className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-200 transform hover:scale-[1.02] shadow-xl flex items-center justify-center space-x-2 group"
                             >

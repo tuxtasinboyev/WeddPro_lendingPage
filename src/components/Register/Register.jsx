@@ -20,9 +20,14 @@ export default function WeddProRegister() {
             ...formData,
             [e.target.name]: e.target.value
         });
+       
+    };
+    const handleButon=(e)=>{
+        e.preventDefault()
         localStorage.setItem(demo, formData)
         navigate('/home')
-    };
+
+    }
 
     const passwordStrength = (password) => {
         let strength = 0;
@@ -341,7 +346,7 @@ export default function WeddProRegister() {
                             </div>
 
                             {/* Register Button */}
-                            <button
+                            <button onClick={handleButon}
                                 disabled={!agreeTerms || formData.password !== formData.confirmPassword || !formData.name || (!formData.mobile && !formData.email)}
                                 className={`w-full font-semibold py-4 px-6 rounded-2xl transition-all duration-200 transform shadow-xl flex items-center justify-center space-x-2 group ${!agreeTerms || formData.password !== formData.confirmPassword || !formData.name || (!formData.mobile && !formData.email)
                                     ? 'bg-gray-600 cursor-not-allowed text-gray-400'
