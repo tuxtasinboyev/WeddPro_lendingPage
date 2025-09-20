@@ -1,8 +1,9 @@
-import { ArrowRight, Eye, EyeOff, Heart, Lock, Mail, Smartphone, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, Eye, EyeOff, Lock, Mail, Smartphone, Sparkles, Zap } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function WeddProLogin() {
+    const navigate = useNavigate()
     const [loginMethod, setLoginMethod] = useState('mobile');
     const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData] = useState({
@@ -16,6 +17,8 @@ export default function WeddProLogin() {
             ...formData,
             [e.target.name]: e.target.value
         });
+        localStorage.setItem(demo, formData)
+        navigate('/home')
     };
 
     return (

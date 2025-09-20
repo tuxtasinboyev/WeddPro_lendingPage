@@ -20,6 +20,8 @@ export default function WeddProRegister() {
             ...formData,
             [e.target.name]: e.target.value
         });
+        localStorage.setItem(demo, formData)
+        navigate('/home')
     };
 
     const passwordStrength = (password) => {
