@@ -363,7 +363,7 @@ export default function WeddProRegister() {
                             <p className="text-gray-400">
                                 Allaqachon hisobingiz bormi?{' '}
                                 <p className="text-pink-400 hover:text-pink-300 font-semibold transition-colors">
-                                    <Link to={'/login'}>Kirish</Link>
+                                    <Link to={'/'}>Kirish</Link>
                                 </p>
                             </p>
                         </div>
