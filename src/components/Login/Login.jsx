@@ -22,7 +22,7 @@ export default function WeddProLogin() {
     const handleButton = (e) => {
         e.preventDefault()
 
-        localStorage.setItem(demo, formData)
+        localStorage.setItem('demo', formData)
         navigate('/home')
     }
 

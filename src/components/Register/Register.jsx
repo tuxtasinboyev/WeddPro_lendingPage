@@ -24,7 +24,7 @@ export default function WeddProRegister() {
     };
     const handleButon=(e)=>{
         e.preventDefault()
-        localStorage.setItem(demo, formData)
+        localStorage.setItem('demo', formData)
         navigate('/home')
 
     }
